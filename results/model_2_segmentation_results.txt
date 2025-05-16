@@ -1,0 +1,69 @@
+Resultados de la Evaluación del Modelo 2: Segmentación de Clientes
+---------------------------------------------------------------------
+Dimensión del espacio latente (encoding_dim): 32
+Número de Clusters (K-Means): 4
+Coeficiente de Silueta: 0.1213
+Índice de Davies-Bouldin: 2.3093
+
+Autoencoder Arquitectura:
+Model: "autoencoder"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ input_layer (InputLayer)        │ (None, 27)             │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense (Dense)                   │ (None, 128)            │         3,584 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout (Dropout)               │ (None, 128)            │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_1 (Dense)                 │ (None, 64)             │         8,256 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout_1 (Dropout)             │ (None, 64)             │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_2 (Dense)                 │ (None, 32)             │         2,080 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_3 (Dense)                 │ (None, 64)             │         2,112 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout_2 (Dropout)             │ (None, 64)             │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_4 (Dense)                 │ (None, 128)            │         8,320 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout_3 (Dropout)             │ (None, 128)            │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_5 (Dense)                 │ (None, 27)             │         3,483 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 83,507 (326.20 KB)
+ Trainable params: 27,835 (108.73 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 55,672 (217.47 KB)
+
+
+Encoder Arquitectura:
+Model: "encoder"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ input_layer (InputLayer)        │ (None, 27)             │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense (Dense)                   │ (None, 128)            │         3,584 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout (Dropout)               │ (None, 128)            │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_1 (Dense)                 │ (None, 64)             │         8,256 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout_1 (Dropout)             │ (None, 64)             │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_2 (Dense)                 │ (None, 32)             │         2,080 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 13,920 (54.38 KB)
+ Trainable params: 13,920 (54.38 KB)
+ Non-trainable params: 0 (0.00 B)
+
+
+Primeras 5 filas con etiquetas de cluster:
+  Branch       City Customer type  Gender            Product line  Unit price  Quantity       Total      Payment    cogs  gross income  Rating  DayOfWeek  Hour  Cluster
+0      A     Yangon        Member  Female       Health and beauty       74.69         7  5489715.00      Ewallet  522.83     261415.00     9.1          2    13        2
+1      C  Naypyitaw        Normal  Female  Electronic accessories       15.28         5       80.22         Cash   76.40          3.82     9.6          5    10        3
+2      A     Yangon        Normal    Male      Home and lifestyle       46.33         7  3405255.00  Credit card  324.31     162155.00     7.4          6    13        0
+3      A     Yangon        Member    Male       Health and beauty       58.22         8   489048.00      Ewallet  465.76      23288.00     8.4          6    20        0
+4      A     Yangon        Normal    Male       Sports and travel       86.31         7  6343785.00      Ewallet  604.17     302085.00     5.3          4    10        2

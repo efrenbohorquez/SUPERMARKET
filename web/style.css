@@ -1,0 +1,137 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+nav {
+    background-color: #444;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+main {
+    padding: 1rem;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section {
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px dotted #ccc;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+section h2 {
+    color: #333;
+    margin-top: 0;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.modelo-descripcion {
+    display: flex;
+    align-items: flex-start; /* Alinea los items al inicio */
+    gap: 20px; /* Espacio entre la imagen y el texto */
+    margin-bottom: 1.5rem;
+}
+
+.modelo-descripcion img.modelo-imagen {
+    max-width: 300px; /* Ajusta el tamaño máximo de la imagen */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.modelo-descripcion img.modelo-icono {
+    max-width: 150px; /* Iconos más pequeños */
+    height: auto;
+    margin-right: 20px;
+}
+
+.modelo-descripcion div {
+    flex: 1; /* El texto ocupa el espacio restante */
+}
+
+.modelo-descripcion h3 {
+    color: #555;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.modelo-descripcion ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.modelo-descripcion ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    .modelo-descripcion {
+        flex-direction: column; /* Apila imagen y texto en pantallas pequeñas */
+        align-items: center; /* Centra los items apilados */
+    }
+    .modelo-descripcion img.modelo-imagen,
+    .modelo-descripcion img.modelo-icono {
+        max-width: 80%; /* Imágenes ocupan más ancho en móviles */
+        margin-bottom: 1rem;
+    }
+}
+

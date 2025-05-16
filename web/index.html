@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos de IA para Supermercados Minoristas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Potenciando su Supermercado con Inteligencia Artificial</h1>
+        <p>Descubra cómo los modelos de redes neuronales pueden ayudarle a optimizar operaciones y mejorar la experiencia del cliente.</p>
+    </header>
+
+    <nav>
+        <a href="#introduccion">Introducción</a>
+        <a href="#modelo1">Predicción de Calificación</a>
+        <a href="#modelo2">Segmentación de Clientes</a>
+        <a href="#modelo3">Predicción de Productos</a>
+        <a href="#conclusion">Conclusión</a>
+    </nav>
+
+    <main>
+        <section id="introduccion">
+            <h2>Introducción: ¿Por qué IA para su Supermercado?</h2>
+            <p>En el competitivo mercado minorista actual, entender a sus clientes y optimizar sus operaciones es más crucial que nunca. La inteligencia artificial (IA), y en particular las redes neuronales, ofrecen herramientas poderosas para analizar los datos de ventas de su supermercado y extraer información valiosa. Este proyecto presenta tres modelos diseñados específicamente para abordar desafíos comunes en la gestión de supermercados, ayudándole a tomar decisiones más informadas y estratégicas.</p>
+            <p>Los modelos se basan en el análisis de datos transaccionales típicos, como los que podría estar recolectando su negocio diariamente. A continuación, exploraremos cada modelo, su propósito y cómo puede beneficiar a su supermercado.</p>
+        </section>
+
+        <section id="modelo1">
+            <h2>Modelo 1: Predicción de la Calificación del Cliente</h2>
+            <div class="modelo-descripcion">
+                <img src="../results/figures/model_1_placeholder.png" alt="Icono de Predicción de Calificación" class="modelo-icono" onerror="this.style.display='none'" /> <!-- Placeholder, la imagen real no se genera en el script de Python -->
+                <div>
+                    <h3>¿Qué es?</h3>
+                    <p>Este modelo utiliza técnicas de regresión para predecir la calificación (por ejemplo, en una escala de 1 a 10) que un cliente podría otorgar a su experiencia de compra. Analiza diversas variables como el tipo de cliente, los productos comprados, la hora de la transacción, el método de pago, y la sucursal.</p>
+                    <h3>¿Cómo le ayuda?</h3>
+                    <ul>
+                        <li><strong>Identificar Factores Clave de Satisfacción:</strong> Descubra qué aspectos de su servicio (rapidez, disponibilidad de productos, amabilidad del personal inferida por otros factores) tienen mayor impacto en la percepción del cliente.</li>
+                        <li><strong>Anticipar Problemas:</strong> Al predecir calificaciones potencialmente bajas, puede identificar patrones o situaciones problemáticas (ej. horas pico con pocas cajas abiertas) y tomar medidas correctivas antes de que afecten a más clientes.</li>
+                        <li><strong>Mejorar la Experiencia del Cliente:</strong> Utilice los insights para implementar mejoras específicas que eleven la satisfacción general y fomenten la lealtad del cliente.</li>
+                        <li><strong>Optimizar Recursos:</strong> Dirija sus esfuerzos y recursos a las áreas que más contribuyen a una experiencia positiva.</li>
+                    </ul>
+                    <p><em>Consulte <code>src/model_1_rating_prediction.py</code> para el código técnico y <code>results/model_1_evaluation_results.txt</code> para su evaluación.</em></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="modelo2">
+            <h2>Modelo 2: Segmentación de Clientes</h2>
+            <div class="modelo-descripcion">
+                <img src="../results/figures/model_2_customer_segments.png" alt="Visualización de Segmentos de Clientes" class="modelo-imagen" onerror="this.src='../results/figures/model_2_placeholder.png'; this.onerror=null;" />
+                <div>
+                    <h3>¿Qué es?</h3>
+                    <p>Este modelo emplea una combinación de autoencoders (para aprender representaciones significativas de los datos de los clientes) y algoritmos de clustering (como K-Means) para agrupar a sus clientes en distintos segmentos basados en sus comportamientos de compra, preferencias y características demográficas.</p>
+                    <h3>¿Cómo le ayuda?</h3>
+                    <ul>
+                        <li><strong>Marketing Personalizado:</strong> Diseñe campañas de marketing y promociones específicas para cada segmento, aumentando la relevancia y la tasa de conversión.</li>
+                        <li><strong>Optimización del Surtido de Productos:</strong> Adapte su inventario y la oferta de productos en función de las preferencias de los segmentos de clientes más valiosos o de aquellos que desea desarrollar.</li>
+                        <li><strong>Mejora de la Comunicación:</strong> Envíe mensajes y ofertas que resuenen con las necesidades e intereses particulares de cada grupo de clientes.</li>
+                        <li><strong>Desarrollo de Nuevos Servicios:</strong> Identifique necesidades no cubiertas en ciertos segmentos que podrían dar lugar a nuevos servicios o mejoras en los existentes.</li>
+                    </ul>
+                    <p><em>Consulte <code>src/model_2_customer_segmentation.py</code> para el código y <code>results/model_2_segmentation_results.txt</code> para su evaluación. La imagen muestra una visualización de los clusters identificados.</em></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="modelo3">
+            <h2>Modelo 3: Predicción de la Línea de Producto Comprada</h2>
+            <div class="modelo-descripcion">
+                <img src="../results/figures/model_3_confusion_matrix.png" alt="Matriz de Confusión para Predicción de Productos" class="modelo-imagen" onerror="this.src='../results/figures/model_3_placeholder.png'; this.onerror=null;" />
+                <div>
+                    <h3>¿Qué es?</h3>
+                    <p>Este modelo de clasificación multiclase predice la probabilidad de que un cliente compre un artículo de una determinada línea de producto (ej. "Alimentos y bebidas", "Electrónicos", "Moda") durante su visita, basándose en las características de la transacción y del cliente.</p>
+                    <h3>¿Cómo le ayuda?</h3>
+                    <ul>
+                        <li><strong>Optimización de Inventario:</strong> Anticipe la demanda de diferentes categorías de productos para asegurar la disponibilidad y reducir el exceso de stock.</li>
+                        <li><strong>Mejora del Diseño de Tienda (Planogramas):</strong> Coloque estratégicamente los productos en la tienda según las afinidades de compra y las predicciones de interés.</li>
+                        <li><strong>Promociones Cruzadas Efectivas:</strong> Identifique oportunidades para promocionar productos de una línea a clientes que probablemente estén interesados, basándose en sus compras actuales o perfil.</li>
+                        <li><strong>Gestión de Categorías:</strong> Entienda mejor qué factores impulsan las ventas en diferentes líneas de producto para tomar decisiones informadas sobre precios y promociones.</li>
+                    </ul>
+                    <p><em>Consulte <code>src/model_3_product_line_prediction.py</code> para el código y <code>results/model_3_classification_results.txt</code> para su evaluación. La imagen muestra la matriz de confusión, que indica qué tan bien el modelo distingue entre las diferentes líneas de producto.</em></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusión: El Futuro de su Negocio está en los Datos</h2>
+            <p>La implementación de estos modelos de redes neuronales es un primer paso hacia la transformación de su supermercado en un negocio impulsado por datos. Al comprender mejor a sus clientes y optimizar sus procesos, no solo podrá mejorar la rentabilidad, sino también construir relaciones más fuertes y duraderas con su clientela.</p>
+            <p>Le invitamos a explorar el <a href="../README.md" target="_blank">repositorio de GitHub</a> asociado a este proyecto para acceder a los códigos, la documentación técnica y las instrucciones para ejecutar estos modelos con sus propios datos (con las adaptaciones necesarias). ¡El poder de la IA está a su alcance!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Supermercados Inteligentes. Proyecto desarrollado por Manus IA.</p>
+    </footer>
+</body>
+</html>
+
